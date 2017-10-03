@@ -104,8 +104,8 @@ const tableData = (state = {}, action) => {
 
             return {
                 ...state,
-                BTC: [updatedBTC, ...state.BTC].slice(-10),
-                ETH: [updatedETH, ...state.ETH].slice(-10),
+                BTC: [updatedBTC, ...state.BTC].slice(0, 10),
+                ETH: [updatedETH, ...state.ETH].slice(0, 10),
             }
         default:
             return state;
