@@ -9,7 +9,8 @@
     "dev-start": "npm run local-build && node index.js",
     "dev": "node_modules/.bin/webpack -w",
     "local-build": "webpack && cp ./client/src/index.html ./client/build/index.html",
-    "build": "npm install && NODE_ENV=production webpack -p && cp ./client/src/index.html ./client/build/index.html"
+    "build": "npm install && NODE_ENV=production webpack -p && cp ./client/src/index.html ./client/build/index.html",
+    "postinstall": "webpack -p --config ./webpack.config.js --progress && cp ./client/src/index.html ./client/build/index.html"
   },
   "engines": {
     "node": "8.4.0",
