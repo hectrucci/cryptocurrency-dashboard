@@ -96,17 +96,12 @@ module.exports = options => {
                 $: 'jquery',
                 jQuery: 'jquery',
             }),
-            new webpack.DefinePlugin({
-                'process.env': {
-                    PORT: JSON.stringify(process.env.PORT || 5000),
-                    NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
-                }
-            }),
             extractStyles,
         ],
     };
 
     if (process.env.NODE_ENV === 'production') {
+        console.log('runnin webpack in production');
         const buildDir = `${__dirname}/client/build`;
         const cleanDist = new CleanPlugin([buildDir], { verbose: false });
 
@@ -116,6 +111,18 @@ module.exports = options => {
             warnings: false,
             mangle: true,
         }));
+        config.plugins.push(new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+            }
+        }),);
+    } else {
+        config.plugins.push(new webpack.DefinePlugin({
+            'process.env': {
+                PORT: JSON.stringify(process.env.PORT || 5000),
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+            }
+        }),);
     }
 
     return config;

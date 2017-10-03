@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/jest",
-    "start": "npm run build && NODE_ENV=production node index.js",
+    "start": "NODE_ENV=production node index.js",
     "dev-start": "npm run local-build && node index.js",
     "dev": "node_modules/.bin/webpack -w",
     "local-build": "webpack && cp ./client/src/index.html ./client/build/index.html",
