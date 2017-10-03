@@ -12,7 +12,8 @@ const connect = () => {
     if (socket) {
         socket.disconnect();
     }
-    socket = openSocket('//localhost:5000');
+    const url = `//localhost:${process.env.PORT}`;
+    socket = openSocket(url);
 };
 
 const disconnect = () => {

@@ -96,6 +96,11 @@ module.exports = options => {
                 $: 'jquery',
                 jQuery: 'jquery',
             }),
+            new webpack.DefinePlugin({
+                'process.env': {
+                    PORT: JSON.stringify(process.env.PORT || 5000),
+                }
+            }),
             extractStyles,
         ],
     };
