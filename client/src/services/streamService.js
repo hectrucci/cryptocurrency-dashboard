@@ -12,7 +12,13 @@ const connect = () => {
     if (socket) {
         socket.disconnect();
     }
-    const url = `//localhost:${process.env.PORT}`;
+
+    let url = `//localhost:${process.env.PORT}`;
+    console.log(process.env.NODE_ENV);
+    if (process.env.NODE_ENV === 'production') {
+        url = window.location.hostname;
+    }
+
     socket = openSocket(url);
 };
 

@@ -99,6 +99,7 @@ module.exports = options => {
             new webpack.DefinePlugin({
                 'process.env': {
                     PORT: JSON.stringify(process.env.PORT || 5000),
+                    NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
                 }
             }),
             extractStyles,
