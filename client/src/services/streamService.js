@@ -14,7 +14,7 @@ const connect = () => {
     }
 
     let url = `//localhost:${process.env.PORT}`;
-    console.log(process.env.NODE_ENV);
+
     if (process.env.NODE_ENV === 'production') {
         url = window.location.hostname;
     }
