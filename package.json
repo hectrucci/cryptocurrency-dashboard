@@ -11,6 +11,10 @@
     "local-build": "webpack && cp ./client/src/index.html ./client/build/index.html",
     "build": "npm install && NODE_ENV=production node_modules/.bin/webpack -p && cp ./client/src/index.html ./client/build/index.html"
   },
+  "engines": {
+    "node": "8.4.0",
+    "npm": "5.3.0"
+  },
   "keywords": [],
   "author": "Hector Antunez",
   "license": "ISC",
