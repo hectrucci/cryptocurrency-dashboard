@@ -185,7 +185,9 @@ class App extends Component {
                             </button>
                         </div>
                         <div className="col-sm-3 app-status-container">
-                            <span className="app-status">Status: {this.state.connected ? 'Connected' : 'Disconnected'}</span>
+                            <span className="app-status">
+                                Status: {this.state.connected ? 'Connected' : 'Disconnected'}
+                            </span>
                         </div>
                     </div>
                 </section>

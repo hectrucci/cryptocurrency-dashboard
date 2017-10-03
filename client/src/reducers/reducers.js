@@ -1,4 +1,7 @@
-import { getNewChartSeries, getNewChartConfig } from '../services/chartService';
+import {
+    getNewChartSeries,
+    getNewChartConfig,
+} from '../services/chartService';
 
 const chartData = (state = getNewChartConfig(), action) => {
     switch (action.type) {
@@ -91,15 +94,15 @@ const tableData = (state = {}, action) => {
 
             const updatedBTC = {
                 time,
-                'USD': BTC.USD,
-                'EUR': BTC.EUR,
+                USD: BTC.USD,
+                EUR: BTC.EUR,
             };
 
             const updatedETH = {
                 time,
-                'USD': ETH.USD,
-                'EUR': ETH.EUR,
-                'BTC': ETH.BTC,
+                USD: ETH.USD,
+                EUR: ETH.EUR,
+                BTC: ETH.BTC,
             }
 
             return {

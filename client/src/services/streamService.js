@@ -13,10 +13,12 @@ const connect = () => {
         socket.disconnect();
     }
 
-    let url = `//localhost:${process.env.PORT}`;
+    let url;
 
     if (process.env.NODE_ENV === 'production') {
         url = window.location.hostname;
+    } else {
+        url = `//localhost:${process.env.PORT}`;
     }
 
     socket = openSocket(url);
@@ -28,4 +30,8 @@ const disconnect = () => {
     }
 };
 
-export  { subscribeToCryptoStream, disconnect, connect, };
+export  {
+    subscribeToCryptoStream,
+    disconnect,
+    connect,
+};

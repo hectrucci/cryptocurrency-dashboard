@@ -43,11 +43,11 @@ class CurrencyCalculator extends Component {
                             className="form-control"
                             onChange={this.onChange}>
                         {this.props.currencies.map((currency) =>
-                                <option key={currency}
-                                        value={currency}>
-                                    {currency}
-                                </option>
-                            )}
+                            <option key={currency}
+                                    value={currency}>
+                                {currency}
+                            </option>
+                        )}
                     </select>
                 </div>
             </div>

@@ -5,6 +5,9 @@ const Cryptocurrency = ({
     cryptocurrency,
     value,
     selectedNormalCurrency,
-}) => <span className="crypto-currency">1 {cryptocurrency} = {value} {selectedNormalCurrency}</span>;
+}) =>
+    <span className="crypto-currency">
+        1 {cryptocurrency} = {value} {selectedNormalCurrency}
+    </span>;
 
 export default Cryptocurrency;

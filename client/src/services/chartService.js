@@ -1,6 +1,11 @@
 import fetch from 'isomorphic-fetch';
 
-const getNewChartSeries = (seriesName, newPrice, series, maxData = 10) => {
+const getNewChartSeries = (
+    seriesName,
+    newPrice,
+    series,
+    maxData = 10,
+) => {
     let price;
 
     return [...series].map((serie) => {

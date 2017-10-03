@@ -3,7 +3,11 @@ import './Calculator.scss';
 
 let currentValue = 0;
 
-const Calculator = ({ total, onCryptoCurrencyChange = f => f, onNormalCurrencyChange = f => f}) => {
+const Calculator = ({
+    total,
+    onCryptoCurrencyChange = f => f,
+    onNormalCurrencyChange = f => f,
+}) => {
     const onNormalChange = (totalValue, currentSelection) => {
             onNormalCurrencyChange(currentValue, currentSelection);
     };
@@ -24,7 +28,6 @@ const Calculator = ({ total, onCryptoCurrencyChange = f => f, onNormalCurrencyCh
                                     onCurrencyChange={onNormalChange.bind(this)}
                                     inputDisabled={true}
                                     total={total} />
-
                 <CurrencyCalculator currencies={['BTC', 'ETH']}
                                     selectId="cryptoCurrencies"
                                     onCurrencyChange={onCryptoChange.bind(this)} />

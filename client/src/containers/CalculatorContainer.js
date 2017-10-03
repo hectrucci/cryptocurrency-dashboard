@@ -1,6 +1,11 @@
-
 import Calculator from '../components/Calculator';
-import { calculateTotal, updateNormalSelection, updateCryptoSelection } from '../actions/actions';
+
+import {
+    calculateTotal,
+    updateNormalSelection,
+    updateCryptoSelection,
+} from '../actions/actions';
+
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {

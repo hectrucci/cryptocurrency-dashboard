@@ -9,6 +9,7 @@ const CryptoTable = ({
     const addTablaData = (cryptocurrency) =>
         Object.keys(cryptocurrency).map((key) => {
             const id = `${filter}-${key}-${generateRandomMunber(cryptocurrency.time)}`;
+
             return <td key={id}>{cryptocurrency[key]}</td>;
         }
     );
