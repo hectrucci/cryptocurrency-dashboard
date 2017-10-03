@@ -1,0 +1,36 @@
+.app {
+    section, h1 {
+        padding-bottom: 20px;
+    }
+
+    .app-status {
+        display: inline-block;
+        padding-top: 7px;
+    }
+
+    .app-status-container {
+        text-align: center;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+
+    .btn-danger[disabled] {
+        background-color: #d9534f !important;
+        border-color: #d43f3a;
+        color: #fff;
+        opacity: 0.65;
+    };
+
+    .btn-primary[disabled] {
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        color: #fff;
+        opacity: 0.65;
+    }
+
+    .crypto-currencies, .app-title {
+        text-align: center;
+    }
+}
