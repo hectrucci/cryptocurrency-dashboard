@@ -194,8 +194,8 @@ class App extends Component {
                 <div className="row">
                     <section className="col-sm-5">
                         <CryptoTableContainer columns={['Time','USD', 'EUR']}
-                                     filter="BTC"
-                                     title="Bitcoin - BTC" />
+                                              filter="BTC"
+                                              title="Bitcoin - BTC" />
                     </section>
                     <section className="col-sm-7">
                         <CryptoTableContainer columns={['Time','USD', 'EUR', 'BTC']}
