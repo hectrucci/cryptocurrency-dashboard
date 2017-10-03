@@ -12,7 +12,7 @@ const connect = () => {
     if (socket) {
         socket.disconnect();
     }
-    socket = openSocket('http://localhost:5000');
+    socket = openSocket('//localhost:5000');
 };
 
 const disconnect = () => {

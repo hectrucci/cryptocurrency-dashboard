@@ -32,4 +32,4 @@ You can use `nvm` to change Node versions.
   npm start
   ```
 
-- This will install the dependencies and run the server in production mode
+- This will run the server in production mode
