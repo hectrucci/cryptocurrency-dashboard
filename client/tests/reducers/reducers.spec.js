@@ -2,7 +2,7 @@ import {
     chartData,
     calculator,
     tableData,
-} from '../../client/src/reducers/reducers';
+} from '../../src/reducers/reducers';
 
 describe('testing chartData reducer', () => {
     it ('should set a new price', () => {

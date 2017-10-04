@@ -22,7 +22,10 @@
   "jest": {
     "moduleDirectories": [
       "node_modules"
-    ]
+  ],
+  "testMatch": [
+      "**/client/tests/**/(*.)spec.js"
+  ]
   },
   "dependencies": {
     "babel-runtime": "6.26.0",
