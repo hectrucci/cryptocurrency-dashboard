@@ -5,7 +5,6 @@ const extractStyles = new ExtractTextPlugin({filename: 'app.css', allChunks: tru
 
 module.exports = options => {
     const config = {
-
         entry: [
             'bootstrap-loader/extractStyles',
             './client/src/containers/App.js',
