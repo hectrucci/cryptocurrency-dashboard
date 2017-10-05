@@ -174,7 +174,7 @@ class App extends Component {
                             <button className="btn btn-primary form-control"
                                     disabled={this.state.connected}
                                     onClick={this.connect.bind(this)}>
-                                    Connect
+                                Connect
                             </button>
                         </div>
                         <div className="col-sm-2">
