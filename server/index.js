@@ -15,7 +15,7 @@ const subscription = [
 	'5~CCCAGG~ETH~BTC',
 ];
 
-cryptoServiceSocket.emit('SubAdd', {subs:subscription} );
+cryptoServiceSocket.emit('SubAdd', { subs: subscription });
 
 io.on('connection', (socket) => {
 	if (isNotProductionEnv) {
@@ -37,6 +37,7 @@ cryptoServiceSocket.on('m', (message) => {
 			if (isNotProductionEnv) {
 				console.log(new Date());
 			}
+
 			io.emit('cryptoChange', res);
 		}
 	}
