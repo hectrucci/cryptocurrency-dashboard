@@ -11,7 +11,7 @@ describe('testing chartData reducer', () => {
                 {
                     name: 'BTC to USD',
                     data: [],
-                }
+                },
             ],
         };
         const action = {
@@ -25,8 +25,8 @@ describe('testing chartData reducer', () => {
                 },
             ],
         };
-
         const result = chartData(state, action);
+
         expect(result.series[0].data[0][1]).toEqual(2);
 
     });
@@ -39,8 +39,8 @@ describe('testing calculator reducer', () => {
             type:'UPDATE_NORMAL_SELECTION',
             selectedCurrency: 'USD',
         };
-
         const result = calculator(state, action);
+
         expect(result.selectedNormalCurrency).toEqual('USD');
     });
 
@@ -50,8 +50,8 @@ describe('testing calculator reducer', () => {
             type:'UPDATE_CRYPTO_SELECTION',
             selectedCurrency: 'BTC',
         };
-
         const result = calculator(state, action);
+
         expect(result.selectedCryptoCurrency).toEqual('BTC');
     });
 });
