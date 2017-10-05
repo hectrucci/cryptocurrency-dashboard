@@ -1,11 +1,11 @@
 const express = require('express');
 const path = require('path');
-const cryptoCurrencyService = require('./server/cryptocurrency_service');
+const cryptoCurrencyService = require('./cryptocurrency_service');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const cryptoServiceSocket = require('socket.io-client')('https://streamer.cryptocompare.com/');
-const CCC = require('./server/ccc-streamer-utilities');
+const CCC = require('./ccc-streamer-utilities');
 const isNotProductionEnv = process.env.NODE_ENV !== 'production';
 const subscription = [
 	'5~CCCAGG~BTC~USD',
