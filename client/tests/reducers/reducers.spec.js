@@ -5,7 +5,7 @@ import {
 } from '../../src/reducers/reducers';
 
 describe('testing chartData reducer', () => {
-    it ('should set a new price', () => {
+    it('should set a new price', () => {
         const state = {
             series: [
                 {
@@ -33,22 +33,22 @@ describe('testing chartData reducer', () => {
 });
 
 describe('testing calculator reducer', () => {
-    it ('should set the normal currency', () => {
+    it('should set the normal currency', () => {
         const state = {};
         const action = {
             type:'UPDATE_NORMAL_SELECTION',
-            selectedCurrency: 'USD'
+            selectedCurrency: 'USD',
         };
 
         const result = calculator(state, action);
         expect(result.selectedNormalCurrency).toEqual('USD');
     });
 
-    it ('should set the crypto currency', () => {
+    it('should set the crypto currency', () => {
         const state = {};
         const action = {
             type:'UPDATE_CRYPTO_SELECTION',
-            selectedCurrency: 'BTC'
+            selectedCurrency: 'BTC',
         };
 
         const result = calculator(state, action);
