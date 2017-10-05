@@ -4,7 +4,7 @@ import './Calculator.scss';
 let currentValue = 0;
 
 const Calculator = ({
-    total,
+    total = 0,
     onCryptoCurrencyChange = f => f,
     onNormalCurrencyChange = f => f,
 }) => {
