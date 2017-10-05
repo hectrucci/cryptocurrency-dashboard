@@ -9,12 +9,12 @@ const Calculator = ({
     onNormalCurrencyChange = f => f,
 }) => {
     const onNormalChange = (totalValue, currentSelection) => {
-            onNormalCurrencyChange(currentValue, currentSelection);
+        onNormalCurrencyChange(currentValue, currentSelection);
     };
 
     const onCryptoChange = (cryptoCurrentValue, currentSelection) => {
-            currentValue = cryptoCurrentValue;
-            onCryptoCurrencyChange(currentValue, currentSelection);
+        currentValue = cryptoCurrentValue;
+        onCryptoCurrencyChange(currentValue, currentSelection);
     };
 
     return (
