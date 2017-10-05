@@ -100,7 +100,7 @@ module.exports = options => {
     };
 
     if (process.env.NODE_ENV === 'production') {
-        console.log('runnin webpack in production');
+        console.log('running webpack in production');
         const buildDir = `${__dirname}/client/build`;
         const cleanDist = new CleanPlugin([buildDir], { verbose: false });
 
